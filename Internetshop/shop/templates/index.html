@@ -5,7 +5,7 @@
 <div class = "heading">
 
         <div class = 'logo'>
-            <h1> Vizi Team Community</h1>
+            <h1 class = 'colorLogo'> Vizi Team Community</h1>
         </div>
 
 
@@ -23,7 +23,7 @@
 
     {% for product in products %}
     <div class="product">
-        <img src="{{ product.image_Url }}">
+        <img class="productPreview" src="{{ product.image_Url }}">
 
         <div>
             <h2>{{ product.name }}</h2>
