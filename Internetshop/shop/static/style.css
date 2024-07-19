@@ -14,6 +14,12 @@
         max-width: 300px;
         max-height: 300px;
     }
+
+    .productPreviewCite {
+        max-width: 500px;
+        max-height: 500px;
+    }
+
     .product {
         display: flex;
         margin-top: 20px;
@@ -28,13 +34,13 @@
         padding-bottom: 10px;
         justify-content: center;
     }
-    a {
+    .navlink {
         margin-right: 50px;
         text-decoration: none;
         color: black;
         font-size: 22px;
     }
-    a:hover {
+    .navlink:hover {
         color: #cf9400;
     }
     h2 {
@@ -76,7 +82,7 @@
         margin-left: 20px;
     }
     .productCard {
-        width: 70%;
+        width: 50%;
         margin-left: auto;
         margin-right: auto;
         color: black;
@@ -96,4 +102,8 @@
 
     .productInfo {
     margin-top: 5%;
-}
+    }
+
+    a{
+    text-decoration:none;
+    }

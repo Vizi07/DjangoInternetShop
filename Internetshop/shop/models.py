@@ -12,4 +12,4 @@ class Product(models.Model):
     image_Url = models.CharField(max_length=256)
 
     def __str__(self): #Это кажется для отоброжения имени товара в админки
-        return f'{self.name} {{id}}'
+        return f'{self.name}'
