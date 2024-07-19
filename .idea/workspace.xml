@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9191289e-0c6f-4f31-b111-fcc837e7427b" name="Changes" comment="Товары теперь есть на сайте в отдельных страницах, но пока что только через id в ссылке">
+    <list default="true" id="9191289e-0c6f-4f31-b111-fcc837e7427b" name="Changes" comment="На продуктах работают ссылки">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Internetshop/shop/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Internetshop/shop/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Internetshop/shop/static/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/Internetshop/shop/static/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Internetshop/shop/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Internetshop/shop/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Internetshop/shop/templates/product.html" beforeDir="false" afterPath="$PROJECT_DIR$/Internetshop/shop/templates/product.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,7 +154,15 @@
       <option name="project" value="LOCAL" />
       <updated>1721413705191</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="На продуктах работают ссылки">
+      <option name="closed" value="true" />
+      <created>1721416600988</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1721416600988</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -190,6 +195,7 @@
     <MESSAGE value="Админы могут полноценно добавлять товар, который будет отображаться на сайте" />
     <MESSAGE value="Добавил вторую страницу и сделал ей начальный дизайн" />
     <MESSAGE value="Товары теперь есть на сайте в отдельных страницах, но пока что только через id в ссылке" />
-    <option name="LAST_COMMIT_MESSAGE" value="Товары теперь есть на сайте в отдельных страницах, но пока что только через id в ссылке" />
+    <MESSAGE value="На продуктах работают ссылки" />
+    <option name="LAST_COMMIT_MESSAGE" value="На продуктах работают ссылки" />
   </component>
 </project>

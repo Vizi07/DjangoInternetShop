@@ -11,5 +11,15 @@ class Product(models.Model):
     price = models.IntegerField()
     image_Url = models.CharField(max_length=256)
 
+    weight = models.IntegerField(null=True, blank=True)
+
+    model = models.CharField(max_length=64, null=True, blank=True)
+    processor = models.CharField(max_length=32, null=True, blank=True)
+    ram_size = models.IntegerField(null=True, blank=True)  # размер оперативной памяти
+    speed = models.FloatField(null=True, blank=True)  # скорость
+    battery_capacity = models.IntegerField(null=True, blank=True)  # ёмкость аккумулятора
+
+
+
     def __str__(self): #Это кажется для отоброжения имени товара в админки
         return f'{self.name}'
