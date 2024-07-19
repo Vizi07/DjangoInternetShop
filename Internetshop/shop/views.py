@@ -13,5 +13,10 @@ def home(request):  #Начальная страница
                    })
 
 
-def view_product(request,id):
-    return render(request, 'product.html')
+def view_product(request, id):
+    product = Product.objects.filter(id=id).first()
+    print(product)
+    return render(request, 'product.html', {
+        'product':product,
+        'id':id
+    })

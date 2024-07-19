@@ -19,10 +19,10 @@
 
 <div class="productCard">
 
-    <img src="/static/Guitar.webp">
+    <img src="{{ product.image_Url }}">
     <div class="productInfo">
-        <h1>Название продукта</h1>
-        <h3>100 рублей</h3>
+        <h1>{{ product.name }}</h1>
+        <h3>{{ product.price }}</h3>
     </div>
 
 </div>
@@ -30,7 +30,7 @@
 <div class="productDetails">
     <h1>Описание:</h1>
     <p>
-        Lorem Ipsum
+        {{ product.description }}
     </p>
 
 </div>
