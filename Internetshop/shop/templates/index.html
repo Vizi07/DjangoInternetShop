@@ -25,9 +25,10 @@
     <div class="product">
         <img class="productPreview" src="{{ product.image_Url }}">
 
-        <div>
+        <div class="productDetails">
+
             <a href="/product/{{ product.id }}">
-                <h2>{{ product.name }}</h2>
+                <h2 class="htwocolor">{{ product.name }}</h2>
             </a>
 
 
@@ -42,29 +43,7 @@
 
     </div>
 
-     <h1>Характеристики:</h1>
 
-    {% if product.weight %}
-    <div class="charRow">
-        <p>
-            Вес:
-        </p>
-        <p>
-            {{ product.weight }} грамм
-        </p>
-    </div>
-    {% endif %}
-
-    {% if product.model %}
-    <div class="charRow">
-        <p>
-            Модель:
-        </p>
-        <p>
-            {{ product.model }}
-        </p>
-    </div>
-    {% endif %}
 
 
     {% endfor %}

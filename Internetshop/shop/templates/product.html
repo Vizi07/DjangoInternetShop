@@ -1,5 +1,5 @@
 {% load static %}
-<link rel="stylesheet" href="{% static 'style.css' %}"/>
+<link rel="stylesheet" href="{% static 'style.css' %}" xmlns:товаре="http://www.w3.org/1999/xhtml"/>
 
 <div class = "heading">
 
@@ -15,6 +15,10 @@
         </div>
 
 
+
+
+
+
 </div>
 
 <div class="productCard">
@@ -27,6 +31,10 @@
 
 </div>
 
+
+
+
+
 <div class="productDetails">
     <h1>Описание:</h1>
     <p>
@@ -34,3 +42,83 @@
     </p>
 
 </div>
+
+
+
+
+
+<div class="productDetails">
+        <h1>Характеристики:</h1>
+
+        {% if product.weight %}
+        <div class="charRow">
+            <p>
+                Вес: {{ product.weight }} кг
+            </p>
+
+        </div>
+        {% endif %}
+
+        {% if product.model %}
+        <div class="charRow">
+            <p>
+                Модель: {{ product.model }}
+            </p>
+
+        </div>
+        {% endif %}
+</div>
+
+
+
+
+
+<div class="productDetails">
+        <h1> Отзывы о товаре:</h1>
+        {% for review in reviews %}
+
+        <div class="reviewHeader">
+            {% if review.rating  == 1 %}
+            <h2 class = 'greentext'>Положительный от пользователя:</h2>
+
+            {% else %}
+            <h2 class = 'redtext'>Отрицательный от пользователя:</h2>
+            {% endif %}
+
+            <h2 > {{ review.author }}</h2>
+
+        </div>
+
+        <p>{{review.text}}</p>
+        {% endfor %}
+
+<div>
+
+
+
+
+
+</div>
+        <h1>Создать отзыв:</h1>
+            <div class="createReview">
+                <form class="createReviewForm" method="POST">
+
+                    {% csrf_token %}
+                    <label for="author">Автор:</label>
+                    <input name="author" class="inputElement" />
+
+                    <label for="rating">Оценка:</label>
+                    <select name="rating" class="inputElement">
+                        <option value="1">Положительная</option>
+                        <option value="0">Отрицательная</option>
+                    </select>
+
+                    <label for="text">Текст отзыва:</label>
+                    <textarea name="text" rows="10" class="inputElement"></textarea>
+
+                    <button>Отправить отзыв</button>
+                </form>
+            </div>
+</div>
+
+

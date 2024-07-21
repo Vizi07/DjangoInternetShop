@@ -19,7 +19,16 @@ class Product(models.Model):
     speed = models.FloatField(null=True, blank=True)  # скорость
     battery_capacity = models.IntegerField(null=True, blank=True)  # ёмкость аккумулятора
 
+    def __str__(self):  #Это кажется для отоброжения имени товара в админки
+        return f'{self.name} ID товара: {self.id}  '
 
 
-    def __str__(self): #Это кажется для отоброжения имени товара в админки
-        return f'{self.name}'
+class Review(models.Model):
+    product = models.ForeignKey(Product, on_delete=models.CASCADE)
+
+    author = models.CharField(max_length=128)
+    rating = models.IntegerField()
+    text = models.TextField()
+
+    def __str__(self):
+        return f'{self.author}: {self.text[:100]}' #добавляет в админке отоброжение, от кого отзыв

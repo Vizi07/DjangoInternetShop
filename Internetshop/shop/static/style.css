@@ -43,7 +43,7 @@
     .navlink:hover {
         color: #cf9400;
     }
-    h2 {
+    .htwocolor {
         color: #cf9400;
     }
     .logo {
@@ -114,4 +114,38 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+    }
+
+    .reviewHeader{
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .reviewHeader *{
+        margin: 0px;
+    }
+
+    .greentext{
+        color:green;
+    }
+    .redtext{
+        color:red;
+    }
+    }
+
+    .createReviewForm {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .createReviewForm * {
+        margin-top: 10px;
+        font-size: 20px;
+    }
+
+    .inputElement {
+        padding: 5px;
+        border-radius: 10px;
+        border: 2px solid #a6a6a6;
     }
