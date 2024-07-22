@@ -13,7 +13,7 @@ def home(request):  #Начальная страница
                    })
 
 
-def view_product(request, id):
+def view_product(request, id): #cтраница продукта
     product = Product.objects.filter(id=id).first()
 
     if request.method == "POST":
@@ -29,3 +29,22 @@ def view_product(request, id):
         'id': id,
         'reviews': reviews,
     })
+
+
+def payment(request,id): #страница оплаты
+    product = Product.objects.filter(id=id).first()
+
+    if request.method == "POST":
+        name = request.POST.get('fullname')
+        address = request.POST.get('address')
+        phone = request.POST.get('phone')
+        print(name, address, phone)
+
+    return render(request,'payment.html',{
+        'product': product,
+        'id':id,
+
+                   })
+
+def payment_success(request):
+    return render(request, 'success.html')

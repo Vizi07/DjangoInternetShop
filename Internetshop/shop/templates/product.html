@@ -27,7 +27,11 @@
     <div class="productInfo">
         <h1>{{ product.name }}</h1>
         <h3>{{ product.price }}</h3>
+        <button>Купить</button>
     </div>
+
+
+
 
 </div>
 
@@ -104,19 +108,23 @@
                 <form class="createReviewForm" method="POST">
 
                     {% csrf_token %}
-                    <label for="author">Автор:</label>
-                    <input name="author" class="inputElement" />
+                    <div class="fio">
+                        <label for="author">Автор:</label>
+                        <input name="author" class="inputElement" />
 
-                    <label for="rating">Оценка:</label>
-                    <select name="rating" class="inputElement">
-                        <option value="1">Положительная</option>
-                        <option value="0">Отрицательная</option>
-                    </select>
+                        <label for="rating">Оценка:</label>
+                        <select name="rating" class="inputElement">
+                            <option value="1">Положительная</option>
+                            <option value="0">Отрицательная</option>
+                        </select>
 
-                    <label for="text">Текст отзыва:</label>
-                    <textarea name="text" rows="10" class="inputElement"></textarea>
+                        <label for="text">Текст отзыва:</label>
+                        <textarea name="text" rows="10" class="inputElement"></textarea>
 
-                    <button>Отправить отзыв</button>
+                        <button>Отправить отзыв</button>
+                    </div>
+
+
                 </form>
             </div>
 </div>

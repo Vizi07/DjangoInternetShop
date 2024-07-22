@@ -149,3 +149,26 @@
         border-radius: 10px;
         border: 2px solid #a6a6a6;
     }
+    .pay{
+        width:50%;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+
+    .fio{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom:20px;
+    }
+    .forpay{
+        gap: 20px;
+        margin-bottom: 10%;
+        margin-top:10%;
+
+    }
+
+    }
+
+

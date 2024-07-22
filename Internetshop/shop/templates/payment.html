@@ -1,0 +1,49 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'style.css' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<div class = "heading">
+
+        <div class = 'logo'>
+            <h1 class = 'colorLogo'> Vizi Team Community</h1>
+        </div>
+
+
+        <div class = 'navigation'>
+            <a class ='navlink' href="/">Главная</a>
+            <a class="navlink" href="/products"> Товары</a>
+            <a class="navlink" href="/discounts">Акции</a>
+        </div>
+</div>
+
+<div class="pay">
+    <h1><i class="fa-solid fa-cart-shopping"></i> Товар к покупке: {{product.name}}</h1>
+    <img class="productPreviewCite" src="{{ product.image_Url }}">
+
+    <div class="forpay">
+        <h2><i class="fa-solid fa-ruble-sign"></i> Цена к оплате: {{product.price}} рублей</h2>
+        <h2><i class="fa-regular fa-credit-card"></i> Реквезиты для перевода</h2>
+        <h2><i class="fa-solid fa-envelope"></i> Почта</h2>
+        <h2><i class="fa-regular fa-user"></i> Имя</h2>
+    </div>
+
+    <h2>Данные о доставке</h2>
+    <div>
+        <form class="fio" method="POST">
+            {% csrf_token %}
+            <label><i class="fa-solid fa-passport"></i> Фио заказчика</label>
+            <input class="inputElement" name="fullname">
+
+            <label><i class="fa-solid fa-phone"></i>Ваш номер телефона</label>
+            <input class="inputElement" name ='phone'>
+
+            <label><i class="fa-solid fa-map-location-dot"> </i> Адрес доставки</label>
+            <input class="inputElement" name="address">
+        <button>Я оплатил</button>
+        </form>
+
+    </div>
+
+
+
+</div>
