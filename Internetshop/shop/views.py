@@ -2,6 +2,11 @@ from django.http import HttpResponse
 from django.shortcuts import render
 from .models import Product, Review
 
+from .telegramData import API_TOKEN, USER_ID
+
+import telebot
+bot=telebot.TeleBot(API_TOKEN)
+
 
 # Create your views here.
 
@@ -13,7 +18,7 @@ def home(request):  #Начальная страница
                    })
 
 
-def view_product(request, id): #cтраница продукта
+def view_product(request, id):  #cтраница продукта
     product = Product.objects.filter(id=id).first()
 
     if request.method == "POST":
@@ -31,7 +36,7 @@ def view_product(request, id): #cтраница продукта
     })
 
 
-def payment(request,id): #страница оплаты
+def payment(request, id):  #страница оплаты
     product = Product.objects.filter(id=id).first()
 
     if request.method == "POST":
@@ -39,12 +44,17 @@ def payment(request,id): #страница оплаты
         address = request.POST.get('address')
         phone = request.POST.get('phone')
         print(name, address, phone)
+        bot.send_message(USER_ID, f'В Vizi Shop купили товар " {product.name} " \n Цена: {product.price} рублей \n '
+                                  f'Заказчик: {name}\n '
+                                  f'Телефон: {phone}\n '
+                                  f'Адрес: {address}')
 
-    return render(request,'payment.html',{
+    return render(request, 'payment.html', {
         'product': product,
-        'id':id,
+        'id': id,
 
-                   })
+    })
+
 
 def payment_success(request):
     return render(request, 'success.html')
