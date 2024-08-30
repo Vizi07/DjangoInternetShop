@@ -41,13 +41,13 @@
         font-size: 22px;
     }
     .navlink:hover {
-        color: #cf9400;
+        color: orange;
     }
     .htwocolor {
-        color: #cf9400;
+        color: orange;
     }
     .logo {
-        background-color: #cf9400;
+        background-color: orange;
         padding: 10px;
         border-radius: 10px;
     }
@@ -64,8 +64,8 @@
         height: 50px;
         width: 100%;
         background-color: white;
-        border: 2px solid #cf9400;
-        color: #cf9400;
+        border: 2px solid orange;
+        color: orange;
         padding: 0;
         border-radius: 10px;
         cursor: pointer;
@@ -73,7 +73,7 @@
     }
     button:hover {
         color: white;
-        background-color: #cf9400;
+        background-color: orange;
         border: none;
     }
     .priceSection {
